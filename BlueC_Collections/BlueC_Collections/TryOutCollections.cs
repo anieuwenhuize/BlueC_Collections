@@ -10,9 +10,16 @@ namespace BlueC_Collections
         /// een I?<int> accepteert en deze vult met 200 even getallen;
         /// </summary>
         /// <returns></returns>
-        public ? AddNumbers(? collectie)
+        public ICollection<int> AddNumbers(ICollection<int> collectie)
         {
+            for (int i = 0; i < 400; i += 2)
+            {
+                int numberToAdd = i;
 
+                collectie.Add(i);
+            }
+
+            return collectie;
         }
 
         /// <summary>
